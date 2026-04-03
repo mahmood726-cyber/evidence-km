@@ -1,90 +1,53 @@
 {
-  "id": "E156-EvidenceKM-2026-04-01",
-  "schema": "e156-v1",
-  "title": "EvidenceKM: Survival Analysis of Statistical Significance Across Trust Thresholds in 888 Cochrane Meta-Analyses",
-  "authors": [
-    {
-      "name": "Mahmood Ahmad",
-      "role": "sole author"
-    }
-  ],
-  "date": "2026-04-01",
-  "word_count": 153,
+  "title": "EvidenceKM: Survival Analysis of Statistical Significance Across Trust Thresholds in Cochrane Meta-Analyses",
+  "body": "At what trust threshold does the statistical significance of Cochrane meta-analyses fail, and which quality components predict survival? We modelled 888 significant meta-analyses from 501 Cochrane reviews as a survival process where trust threshold acts as the time axis and loss of significance as the event. Kaplan-Meier estimation with Greenwood variance and log-log confidence intervals tracked the proportion of findings surviving at each threshold, while simplified Cox proportional hazards identified protective components. Median survival threshold was 65, meaning half of all significant findings erode below a trust score of 65, with 31.8% weakened by trust-adjusted z-statistics falling below 1.96. The log-rank test confirmed significant domain-level variation (chi-squared 19.99, four degrees of freedom, p equals 0.0005), while Cox analysis identified robustness (HR 0.161) and stability (HR 0.167) as the strongest protective factors. Survival analysis reveals a critical vulnerability zone between trust scores 60 and 75 where most significant findings collapse. These results depend on a simplified Cox approximation rather than full partial likelihood estimation.",
   "sentences": [
     {
-      "id": "S1",
-      "role": "background",
-      "text": "Statistical significance in meta-analyses is routinely accepted at face value, yet few tools evaluate how robustly it survives scrutiny across escalating evidence-quality thresholds."
+      "role": "Question",
+      "text": "At what trust threshold does the statistical significance of Cochrane meta-analyses fail, and which quality components predict survival?"
     },
     {
-      "id": "S2",
-      "role": "objective",
-      "text": "We applied Kaplan-Meier survival analysis to 888 Cochrane meta-analyses (p < 0.05), treating each MA's composite trust score as its event time and measuring 'death' (loss of significance) as any threshold exceeding that score."
+      "role": "Dataset",
+      "text": "We modelled 888 significant meta-analyses from 501 Cochrane reviews as a survival process where trust threshold acts as the time axis and loss of significance as the event."
     },
     {
-      "id": "S3",
-      "role": "methods",
-      "text": "A trust-adjusted z-score (z_trust = z_orig \u00d7 \u221a(score/100)) was computed for each MA; log-rank chi-squared compared survival across the top five clinical domains; simplified Cox proportional hazards quantified the role of five trust components."
+      "role": "Method",
+      "text": "Kaplan-Meier estimation with Greenwood variance and log-log confidence intervals tracked the proportion of findings surviving at each threshold, while simplified Cox proportional hazards identified protective components."
     },
     {
-      "id": "S4",
-      "role": "results-primary",
-      "text": "Median survival threshold was 65 (50% of MAs would lose significance at trust score 65), and 31.8% (n = 282) were already weakened (z_trust < 1.96) at their own score level; clinical domains differed significantly (log-rank chi-squared = 19.99, df = 4, p = 0.0005)."
+      "role": "Primary result",
+      "text": "Median survival threshold was 65, meaning half of all significant findings erode below a trust score of 65, with 31.8% weakened by trust-adjusted z-statistics falling below 1.96."
     },
     {
-      "id": "S5",
-      "role": "results-secondary",
-      "text": "Robustness score (HR = 0.16) and stability score (HR = 0.17) were the strongest protective components; audit score (HR = 0.41) was intermediate; power score (HR = 0.90, p = 0.11) was non-significant."
+      "role": "Robustness",
+      "text": "The log-rank test confirmed significant domain-level variation (chi-squared 19.99, four degrees of freedom, p equals 0.0005), while Cox analysis identified robustness (HR 0.161) and stability (HR 0.167) as the strongest protective factors."
     },
     {
-      "id": "S6",
-      "role": "discussion",
-      "text": "The steep survival drop around threshold 65\u201375 suggests a critical zone where conventional significance is most vulnerable, identifying domains \u2014 particularly Diabetes and Hypertension \u2014 with systematically lower evidence resilience."
+      "role": "Interpretation",
+      "text": "Survival analysis reveals a critical vulnerability zone between trust scores 60 and 75 where most significant findings collapse."
     },
     {
-      "id": "S7",
-      "role": "conclusion",
-      "text": "Survival analysis provides a novel lens for grading the durability of meta-analytic significance, enabling threshold-conditional inference in systematic reviews."
+      "role": "Boundary",
+      "text": "These results depend on a simplified Cox approximation rather than full partial likelihood estimation."
     }
   ],
-  "key_findings": {
-    "n_significant": 888,
-    "n_weakened": 282,
-    "pct_weakened": 31.8,
-    "median_survival_threshold": 65,
-    "log_rank_chi2": 19.99,
-    "log_rank_df": 4,
-    "log_rank_p": 0.0005,
-    "cox_robustness_hr": 0.1613,
-    "cox_stability_hr": 0.167,
-    "cox_audit_hr": 0.4051,
-    "cox_consistency_hr": 0.8439,
-    "cox_power_hr": 0.8974,
-    "cox_power_p": 0.1069,
-    "top5_domains": ["Other", "Diabetes", "Hypertension", "Cardiovascular", "Pain"]
+  "wordCount": 163,
+  "sentenceCount": 7,
+  "outsideNote": {
+    "type": "methods",
+    "primary_estimand": "Median survival threshold",
+    "app": "EvidenceKM v1.0",
+    "data": "888 significant MAs from 501 Cochrane reviews",
+    "code": "C:\\Models\\EvidenceKM",
+    "doi": "",
+    "version": "1.0",
+    "date": "2026-04-01",
+    "certainty": "moderate",
+    "validationStatus": "PASS"
   },
-  "data_sources": [
-    {
-      "name": "EvidenceScore",
-      "path": "C:/Models/EvidenceScore/results/scores.csv",
-      "n": 6229
-    },
-    {
-      "name": "ActionableEvidence verdicts",
-      "path": "C:/Models/ActionableEvidence/results/verdicts.csv",
-      "n_significant": 888
-    },
-    {
-      "name": "TrustGate domain classification",
-      "path": "C:/Models/TrustGate/data/review_groups.csv",
-      "n_reviews": 501
-    }
-  ],
-  "methods": {
-    "km": "S(t) = prod(1 - d_i/n_i); Greenwood variance; log-log 95% CI",
-    "log_rank": "chi-squared statistic; p from chi2 distribution",
-    "cox_ph": "simplified: HR = exp(SMD of trust component in early vs late event groups)"
-  },
-  "target_journal": "F1000Research",
-  "status": "draft"
+  "meta": {
+    "created": "2026-04-01",
+    "valid": true,
+    "schemaVersion": "0.2"
+  }
 }
