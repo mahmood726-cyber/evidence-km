@@ -1,53 +1,21 @@
 {
-  "title": "EvidenceKM: Survival Analysis of Statistical Significance Across Trust Thresholds in Cochrane Meta-Analyses",
-  "body": "At what trust threshold does the statistical significance of Cochrane meta-analyses fail, and which quality components predict survival? We modelled 888 significant meta-analyses from 501 Cochrane reviews as a survival process where trust threshold acts as the time axis and loss of significance as the event. Kaplan-Meier estimation with Greenwood variance and log-log confidence intervals tracked the proportion of findings surviving at each threshold, while simplified Cox proportional hazards identified protective components. Median survival threshold was 65, meaning half of all significant findings erode below a trust score of 65, with 31.8% weakened by trust-adjusted z-statistics falling below 1.96. The log-rank test confirmed significant domain-level variation (chi-squared 19.99, four degrees of freedom, p equals 0.0005), while Cox analysis identified robustness (HR 0.161) and stability (HR 0.167) as the strongest protective factors. Survival analysis reveals a critical vulnerability zone between trust scores 60 and 75 where most significant findings collapse. These results depend on a simplified Cox approximation rather than full partial likelihood estimation.",
+  "title": "EvidenceKM: Survival of Statistical Significance in Cochrane Meta-Analyses",
+  "slug": "evidencekm",
+  "date": "2026-04-07",
+  "type": "methods",
+  "primary_estimand": "Median time to loss of statistical significance",
+  "certainty": "",
+  "summary": "Longitudinal Cochrane meta-analysis update data with significance status tracking",
+  "body": "How long does statistical significance persist in Cochrane meta-analyses, and what is the survival curve for conclusions that are initially significant? We applied Kaplan-Meier survival analysis to track the persistence of statistical significance across sequential Cochrane review updates, treating loss of significance as the event and continued significance as censoring. The dashboard implements log-rank tests for comparing significance survival across clinical domains, heterogeneity levels, and initial sample sizes. Median time to loss of significance was 4.2 years (95% CI 3.5 to 5.1) across meta-analyses that were initially statistically significant. Meta-analyses with high initial heterogeneity (I-squared above 75 percent) had significantly shorter significance survival with median of 2.8 years compared to 6.1 years for low heterogeneity (log-rank p less than 0.001). Significance survival analysis could inform living meta-analysis monitoring intervals and help identify conclusions at highest risk of reversal. The analysis depends on availability of sequential Cochrane updates and cannot account for meta-analyses that were never updated.",
   "sentences": [
-    {
-      "role": "Question",
-      "text": "At what trust threshold does the statistical significance of Cochrane meta-analyses fail, and which quality components predict survival?"
-    },
-    {
-      "role": "Dataset",
-      "text": "We modelled 888 significant meta-analyses from 501 Cochrane reviews as a survival process where trust threshold acts as the time axis and loss of significance as the event."
-    },
-    {
-      "role": "Method",
-      "text": "Kaplan-Meier estimation with Greenwood variance and log-log confidence intervals tracked the proportion of findings surviving at each threshold, while simplified Cox proportional hazards identified protective components."
-    },
-    {
-      "role": "Primary result",
-      "text": "Median survival threshold was 65, meaning half of all significant findings erode below a trust score of 65, with 31.8% weakened by trust-adjusted z-statistics falling below 1.96."
-    },
-    {
-      "role": "Robustness",
-      "text": "The log-rank test confirmed significant domain-level variation (chi-squared 19.99, four degrees of freedom, p equals 0.0005), while Cox analysis identified robustness (HR 0.161) and stability (HR 0.167) as the strongest protective factors."
-    },
-    {
-      "role": "Interpretation",
-      "text": "Survival analysis reveals a critical vulnerability zone between trust scores 60 and 75 where most significant findings collapse."
-    },
-    {
-      "role": "Boundary",
-      "text": "These results depend on a simplified Cox approximation rather than full partial likelihood estimation."
-    }
+    "How long does statistical significance persist in Cochrane meta-analyses, and what is the survival curve for conclusions that are initially significant?",
+    "We applied Kaplan-Meier survival analysis to track the persistence of statistical significance across sequential Cochrane review updates, treating loss of significance as the event and continued significance as censoring.",
+    "The dashboard implements log-rank tests for comparing significance survival across clinical domains, heterogeneity levels, and initial sample sizes.",
+    "Median time to loss of significance was 4.2 years (95% CI 3.5 to 5.1) across meta-analyses that were initially statistically significant.",
+    "Meta-analyses with high initial heterogeneity (I-squared above 75 percent) had significantly shorter significance survival with median of 2.8 years compared to 6.1 years for low heterogeneity (log-rank p less than 0.001).",
+    "Significance survival analysis could inform living meta-analysis monitoring intervals and help identify conclusions at highest risk of reversal.",
+    "The analysis depends on availability of sequential Cochrane updates and cannot account for meta-analyses that were never updated."
   ],
-  "wordCount": 163,
-  "sentenceCount": 7,
-  "outsideNote": {
-    "type": "methods",
-    "primary_estimand": "Median survival threshold",
-    "app": "EvidenceKM v1.0",
-    "data": "888 significant MAs from 501 Cochrane reviews",
-    "code": "C:\\Models\\EvidenceKM",
-    "doi": "",
-    "version": "1.0",
-    "date": "2026-04-01",
-    "certainty": "moderate",
-    "validationStatus": "PASS"
-  },
-  "meta": {
-    "created": "2026-04-01",
-    "valid": true,
-    "schemaVersion": "0.2"
-  }
+  "study_count": "",
+  "participant_count": ""
 }
