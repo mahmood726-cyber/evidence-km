@@ -1,21 +1,61 @@
 {
-  "title": "EvidenceKM: Survival of Statistical Significance in Cochrane Meta-Analyses",
+  "title": "Untitled E156",
   "slug": "evidencekm",
-  "date": "2026-04-07",
+  "author": "Mahmood Ahmad",
+  "date": "2026-03-26",
+  "body": "",
+  "word_count": 0,
+  "sentence_count": 0,
+  "sentences": [],
+  "notes": {
+    "code": "https://github.com/mahmood726-cyber/evidencekm"
+  },
   "type": "methods",
-  "primary_estimand": "Median time to loss of statistical significance",
-  "certainty": "",
-  "summary": "Longitudinal Cochrane meta-analysis update data with significance status tracking",
-  "body": "How long does statistical significance persist in Cochrane meta-analyses, and what is the survival curve for conclusions that are initially significant? We applied Kaplan-Meier survival analysis to track the persistence of statistical significance across sequential Cochrane review updates, treating loss of significance as the event and continued significance as censoring. The dashboard implements log-rank tests for comparing significance survival across clinical domains, heterogeneity levels, and initial sample sizes. Median time to loss of significance was 4.2 years (95% CI 3.5 to 5.1) across meta-analyses that were initially statistically significant. Meta-analyses with high initial heterogeneity (I-squared above 75 percent) had significantly shorter significance survival with median of 2.8 years compared to 6.1 years for low heterogeneity (log-rank p less than 0.001). Significance survival analysis could inform living meta-analysis monitoring intervals and help identify conclusions at highest risk of reversal. The analysis depends on availability of sequential Cochrane updates and cannot account for meta-analyses that were never updated.",
-  "sentences": [
-    "How long does statistical significance persist in Cochrane meta-analyses, and what is the survival curve for conclusions that are initially significant?",
-    "We applied Kaplan-Meier survival analysis to track the persistence of statistical significance across sequential Cochrane review updates, treating loss of significance as the event and continued significance as censoring.",
-    "The dashboard implements log-rank tests for comparing significance survival across clinical domains, heterogeneity levels, and initial sample sizes.",
-    "Median time to loss of significance was 4.2 years (95% CI 3.5 to 5.1) across meta-analyses that were initially statistically significant.",
-    "Meta-analyses with high initial heterogeneity (I-squared above 75 percent) had significantly shorter significance survival with median of 2.8 years compared to 6.1 years for low heterogeneity (log-rank p less than 0.001).",
-    "Significance survival analysis could inform living meta-analysis monitoring intervals and help identify conclusions at highest risk of reversal.",
-    "The analysis depends on availability of sequential Cochrane updates and cannot account for meta-analyses that were never updated."
-  ],
-  "study_count": "",
-  "participant_count": ""
+  "primary_estimand": "",
+  "validation": {
+    "status": "fail",
+    "checks": [
+      {
+        "name": "single paragraph",
+        "ok": true,
+        "detail": "Body must not contain blank-line paragraph breaks."
+      },
+      {
+        "name": "sentence count",
+        "ok": false,
+        "detail": "Found 0 sentences."
+      },
+      {
+        "name": "word count",
+        "ok": true,
+        "detail": "Found 0 words."
+      },
+      {
+        "name": "no headings",
+        "ok": true,
+        "detail": "No markdown headings allowed in body."
+      },
+      {
+        "name": "no links",
+        "ok": true,
+        "detail": "No links or DOI links allowed in body."
+      },
+      {
+        "name": "result sentence has interval",
+        "ok": false,
+        "detail": "Sentence 4 should include a quantitative result such as a percentage, count, or interval."
+      },
+      {
+        "name": "result sentence has estimand",
+        "ok": false,
+        "detail": "Sentence 4 should name an effect measure or test metric."
+      },
+      {
+        "name": "boundary sentence present",
+        "ok": false,
+        "detail": "Sentence 7 should express a limitation, harm, or scope boundary."
+      }
+    ]
+  },
+  "schema": "e156-v0.2"
 }
