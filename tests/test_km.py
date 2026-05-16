@@ -8,11 +8,12 @@ T16-T20: Cox PH (significant covariate, null covariate, constant values, empty, 
 T21-T25: Pipeline integration (fixture data, real data if exists, output validation)
 """
 
-import sys
 import math
+import sys
+from pathlib import Path
 import pytest
 
-sys.path.insert(0, "C:/Models/EvidenceKM")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from km_engine import (
     z_from_p,

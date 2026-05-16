@@ -385,7 +385,7 @@ function drawKMDomain(){
 
     var item=document.createElement('div');
     item.className='legend-item';
-    item.innerHTML='<div class="legend-dot" style="background:' + col + '"><\/div><span>' + tgEsc(domain) + '<\/span>';
+    item.innerHTML='<div class="legend-dot" style="background:' + col + '"></div><span>' + tgEsc(domain) + '</span>';
     legEl.appendChild(item);
   });
 }
@@ -505,7 +505,7 @@ if(document.readyState==='loading'){
 window.addEventListener('resize', function(){ setTimeout(init,100); });
 
 })();
-<\/script>
+</script>
 </body>
 </html>""")
 
