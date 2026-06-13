@@ -266,6 +266,17 @@ class TestCoxPH:
         assert result["ci_upper"] is None
         assert result["p_value"] == 1.0
 
+    def test_T19b_singleton_groups_no_zero_division(self):
+        """T19b: One observation per split group must not divide by zero (df=0 guard)."""
+        cohort = [
+            {"event_time": 10, "audit_score": 5.0},
+            {"event_time": 20, "audit_score": 9.0},
+        ]
+        # split_quantile=0.0 forces 1 early / 1 late -> pooled df = 0
+        result = cox_ph_simplified(cohort, "audit_score", split_quantile=0.0)
+        assert result["hr"] > 0
+        assert math.isfinite(result["hr"])
+
     def test_T20_basic_hr_structure(self):
         """T20: Cox result has required keys and valid HR range."""
         cohort = _make_cohort_fixture()

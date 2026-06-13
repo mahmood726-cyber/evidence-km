@@ -426,8 +426,12 @@ def cox_ph_simplified(
     n_e = len(early)
     n_l = len(late)
 
-    # Pooled SD
-    pooled_var = ((n_e - 1) * sd_e ** 2 + (n_l - 1) * sd_l ** 2) / (n_e + n_l - 2)
+    # Pooled SD (guard df=0 when both groups have a single observation)
+    pooled_df = n_e + n_l - 2
+    if pooled_df <= 0:
+        pooled_var = (sd_e ** 2 + sd_l ** 2) / 2.0
+    else:
+        pooled_var = ((n_e - 1) * sd_e ** 2 + (n_l - 1) * sd_l ** 2) / pooled_df
     pooled_sd = math.sqrt(pooled_var) if pooled_var > 0 else 1e-9
 
     # SMD (early - late): early events had lower covariate → SMD > 0 → HR > 1 (risk)
